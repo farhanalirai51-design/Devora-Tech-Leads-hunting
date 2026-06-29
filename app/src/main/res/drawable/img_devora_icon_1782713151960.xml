@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Glowing background node/shield of Devora Tech -->
+    <path
+        android:fillColor="#120E24"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2z" />
+    <!-- Web/Code Brackets inside the core -->
+    <path
+        android:strokeColor="#BB86FC"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M9,10l-3,2 3,2 M15,10l3,2 -3,2 M13,9l-2,6" />
+    <!-- Radar concentric outer glow circles -->
+    <path
+        android:strokeColor="#BB86FC"
+        android:strokeWidth="0.8"
+        android:strokeAlpha="0.4"
+        android:pathData="M12,5 A7,7 0 1,1 11.9,5" />
+    <path
+        android:strokeColor="#BB86FC"
+        android:strokeWidth="0.5"
+        android:strokeAlpha="0.2"
+        android:pathData="M12,3 A9,9 0 1,1 11.9,3" />
+</vector>
