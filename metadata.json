@@ -1,0 +1,6 @@
+{
+  "name": "Devora Tech",
+  "description": "Premium B2B website discovery, intelligent audit analyzer, and high-converting cold outreach companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

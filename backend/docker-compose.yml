@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: leadhunter_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: leadhunter_admin
+      POSTGRES_PASSWORD: production_secure_db_password_2026
+      POSTGRES_DB: leadhunter_production
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  web:
+    build: .
+    container_name: leadhunter_fastapi
+    restart: always
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    environment:
+      - DATABASE_URL=postgresql://leadhunter_admin:production_secure_db_password_2026@db:5432/leadhunter_production
+      - JWT_SECRET=super_secret_signing_key_for_production_leadhunter_ai
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
